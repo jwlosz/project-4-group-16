@@ -1,0 +1,20 @@
+/* Navbar Customization */
+.navbar {
+    background-color: #002856;
+}
+
+.navbar-nav .nav-link {
+    color: #F0EAD2;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-brand {
+    color: #F0EAD2;
+    font-weight: bold;
+}
+
+/* Align navbar links to the left */
+.navbar-nav {
+    margin-right: auto;
+}
