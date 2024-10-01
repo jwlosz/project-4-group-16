@@ -14,7 +14,62 @@
     font-weight: bold;
 }
 
+.nav-link:hover {
+    color: #176087; /* Change color to blue when hovered over */
+}
+
+.navbar-brand:hover {
+    color: #176087; /* Change color to blue when hovered over */
+}
+
 /* Align navbar links to the left */
 .navbar-nav {
     margin-right: auto;
 }
+
+/* Card Customization */
+.card {
+    background-color: #f0ead2;
+}
+
+.btn {
+    background-color: #002856;
+    color: #f0ead2;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #176087;
+    color: #f0ead2;
+}
+
+.border-primary {
+    border-color: #002856 !important;
+}
+
+/* Custom CSS for background color */
+body {
+    background-color: #BEB292;
+}
+
+/* Style for team member section */
+.team-member {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.team-member p {
+    margin-top: 10px;
+}
+
+.team-member img {
+width: 100%;
+height: 200px; /* Set the desired height for all images */
+object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+

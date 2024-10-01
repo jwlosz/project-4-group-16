@@ -17,8 +17,12 @@ $(document).ready(function() {
     });
 });
 
-
-// call Flask API endpoint
+/**
+ * Calls the hypertension prediction API endpoint to get the probability of having hypertension.
+ *
+ * Collects all the input fields from the hypertension form and sends them to the API endpoint.
+ * On success, updates the text of the #ht_output element.
+ */
 function makeHypertensionPrediction() {
     let age = $("#ht_age").val();
     let cp = $("#cp").val();
@@ -64,6 +68,12 @@ function makeHypertensionPrediction() {
 
 }
 
+/**
+ * Calls the stroke prediction API endpoint to get the probability of having a stroke.
+ *
+ * Collects all the input fields from the stroke form and sends them to the API endpoint.
+ * On success, updates the text of the #s_output element.
+ */
 function makeStrokePrediction() {
     let age = $("#s_age").val();
     let hypertension = $("#s_hypertension").val();
@@ -113,6 +123,12 @@ function makeStrokePrediction() {
 }
 
 
+/**
+ * Calls the diabetes prediction API endpoint to get the probability of having diabetes.
+ *
+ * Collects all the input fields from the diabetes form and sends them to the API endpoint.
+ * On success, updates the text of the #d_output element.
+ */
 function makeDiabetesPrediction() {
     let gender = $("#d_gender").val();
     let age = $("#d_age").val();
@@ -157,6 +173,6 @@ function makeDiabetesPrediction() {
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
             alert("Error: " + errorThrown);
-        }    
+        }
     });
 }

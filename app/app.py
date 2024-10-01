@@ -4,7 +4,7 @@
 # IMPORTS
 #####################################################################
 
-from flask import Flask, render_template, redirect, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from modelHelper import ModelHelper
 
 #####################################################################
@@ -25,42 +25,45 @@ model_helper = ModelHelper()
 # Home
 @app.route("/")
 def home():
-    # Return template and data
+
     return render_template("home.html")
 
 
 # About Us
 @app.route("/about_us")
 def about_us():
-    # Return template and data
+
     return render_template("about_us.html")
 
 
 @app.route("/works_cited")
 def works_cited():
-    # Return template and data
+
     return render_template("works_cited.html")
 
 
 # Diabetes Dashboard
 @app.route("/diabetes_dashboard")
 def diabetes_dash():
-    # Return template and data
+
     return render_template("diabetes_dashboard.html")
 
 
 @app.route("/stroke_hyper_dashboard")
 def stroke_hyper_dash():
+
     return render_template("stroke_hyper_dashboard.html")
 
 
 @app.route("/predictions")
 def predictions():
+
     return render_template("predictions.html")
 
 
 @app.route("/strokePrediction", methods=["POST"])
 def predict_stroke():
+
     content = request.json["data"]
 
     age = float(content["age"])
@@ -83,6 +86,7 @@ def predict_stroke():
 
 @app.route("/hypertensionPrediction", methods=["POST"])
 def predict_hypertension():
+
     content = request.json["data"]
 
     age = float(content["age"])
@@ -97,6 +101,7 @@ def predict_hypertension():
 
 @app.route("/diabetesPrediction", methods=["POST"])
 def predict_diabetes():
+
     content = request.json["data"]
 
     age = float(content["age"])

@@ -5,7 +5,6 @@
 #####################################################################
 
 import pickle
-import numpy as np
 import pandas as pd
 
 #####################################################################
@@ -80,7 +79,7 @@ class ModelHelper:
 
         df = df.loc[:, ['Age', 'Sex', 'HighChol', 'BMI', 'Smoker', 'GenHlth',
                         'MentHlth', 'PhysHlth', 'HighBP']]
-        return self.predict("app/static/ml/diabetes_model.h5", df)
+        return self.predict("app/static/ml/diabetes.pkl", df)
 
     # predict hypertension
     def predict_hypertension(self, age, cp, trestbps, chol, thal):
