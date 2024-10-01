@@ -48,9 +48,39 @@ class ModelHelper:
         return model.predict_proba(X)[0][1]
 
     # predict diabetes
-    def predict_diabetes(self, x):
-        # @TODO add diabetes model
-        pass
+    def predict_diabetes(self, age, sex, highChol, bmi, smoke, genHlth,
+                         mntHlth, physHlth, highBP):
+        """Make a prediction with the diabetes model
+
+        Args:
+            age (float): Age of the individual
+            sex (float): Sex of the individual (0 = female, 1 = male)
+            highChol (float): High cholesterol?
+            bmi (float): Body mass index
+            smoke (float): Does the individual smoke?
+            genHlth (float): General health (1-5)
+            mntHlth (float): Mental health (0-30)
+            physHlth (float): Physical health (0-30)
+            highBP (float): High blood pressure?
+            diabetes (float): Does the individual have diabetes?
+
+        Returns:
+            float: The probability of a positive prediction
+        """
+        df = pd.DataFrame()
+        df["Age"] = [age]
+        df["Sex"] = [sex]
+        df["HighChol"] = highChol
+        df["BMI"] = bmi
+        df["Smoker"] = smoke
+        df["GenHlth"] = genHlth
+        df["MentHlth"] = mntHlth
+        df["PhysHlth"] = physHlth
+        df["HighBP"] = highBP
+
+        df = df.loc[:, ['Age', 'Sex', 'HighChol', 'BMI', 'Smoker', 'GenHlth',
+                        'MentHlth', 'PhysHlth', 'HighBP']]
+        return self.predict("app/static/ml/diabetes_model.h5", df)
 
     # predict hypertension
     def predict_hypertension(self, age, cp, trestbps, chol, thal):
@@ -76,7 +106,7 @@ class ModelHelper:
 
         df = df.loc[:, ['age', 'cp', 'trestbps', 'chol', 'thal']]
 
-        return self.predict("static/ml/hypertension_model.h5", df)
+        return self.predict("app/static/ml/hypertension_model.h5", df)
 
     # predict stroke
     def predict_stroke(self, age, hypertension, heart_disease, ever_married,
@@ -100,7 +130,7 @@ class ModelHelper:
         Returns:
             float: Probability of stroke
         """
-        df = pd.DataFrame
+        df = pd.DataFrame()
         df["age"] = [age]
         df["hypertension"] = [hypertension]
         df["heart_disease"] = [heart_disease]
@@ -115,4 +145,4 @@ class ModelHelper:
                         'work_type', 'Residence_type', 'avg_glucose_level',
                         'bmi', 'smoking_status']]
 
-        return self.predict("static/ml/stroke_model.h5", df)
+        return self.predict("app/static/ml/stroke_model.h5", df)

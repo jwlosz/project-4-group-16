@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Health Risk Predictions</title>
     <link href="./static/css/static.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="static/js/predictions.js"></script>
+
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -93,6 +98,245 @@
     <!-- Add spacing -->
     <br/>
 
+    <!-- Diabetes Form -->
+    <div class="container">
+        <div class="card border-primary mb-3" style="max-width: 50rem;">
+            <div class="card-header">Diabetes Form</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_gender">Gender</label>
+                            <select id="d_gender">
+                                <option value="0">Female</option>
+                                <option value="1">Male</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_age">Age</label>
+                            <select id="d_age">
+                                <option value="1">18-24</option>
+                                <option value="2">25-29</option>
+                                <option value="3">30-34</option>
+                                <option value="4">35-39</option>
+                                <option value="5">40-44</option>
+                                <option value="6">45-49</option>
+                                <option value="7">50-54</option>
+                                <option value="8">55-59</option>
+                                <option value="9">60-64</option>
+                                <option value="10">65-69</option>
+                                <option value="11">70-74</option>
+                                <option value="12">75-79</option>
+                                <option value="13">80+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_highChol">High Cholesterol</label>
+                            <select id="d_highChol">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_smoker">Have you smoked at least 100 cigarettes in your entire life?</label>
+                            <select id="d_smoker">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_genHlth">General Health</label>
+                            <select id="d_genHlth">
+                                <option value="1">Excellent</option>
+                                <option value="2">Very Good</option>
+                                <option value="3">Good</option>
+                                <option value="4">Fair</option>
+                                <option value="5">Poor</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_mentHlth">Days of Poor Mental Health in Last 30 Days</label>
+                            <input type="text" class="form-control" value="0" id="d_mentHlth">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_physHlth">Days of Poor Physical Health in Last 30 Days</label>
+                            <input type="text" class="form-control" value="0" id="d_physHlth">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_highBP">High Blood Pressure</label>
+                            <select id="d_highBP">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="d_bmi">BMI</label>
+                            <input type="text" class="form-control" value="25" id="d_bmi">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary" id="d_predict">Make Prediction!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="d_output"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
+    <br/>
+
+    <!-- Hypertension Form -->
+    <div class="container">
+        <div class="card border-primary mb-3" style="max-width: 50rem;">
+            <div class="card-header">Hypertension Form</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="ht_age">Age</label>
+                            <input type="text" class="form-control" value="25" id="ht_age">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="cp">Chest Pain</label>
+                            <select id="cp">
+                                <option value="0">No Chest Pain</option>
+                                <option value="1">Typical Angina</option>
+                                <option value="2">Atypical Angina</option>
+                                <option value="3">Non-Anginal Chest Pain</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="trestbps">Resting Blood Pressure (mm Hg)</label>
+                            <input type="text" class="form-control" value="128" id="trestbps">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="chol">Serum Cholesterol (mg/dl)</label>
+                            <input type="text" class="form-control" value="250" id="chol">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="thal">Thalassemia</label>
+                            <select id="thal">
+                                <option value="0">Unknown</option>
+                                <option value="1">None</option>
+                                <option value="2">Treated</option>
+                                <option value="3">Untreated</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary" id="ht_predict">Make Prediction!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="ht_output"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
+    <!-- Stroke Form -->
+    <div class="container">
+        <div class="card border-primary mb-3" style="max-width: 50rem;">
+            <div class="card-header">Stroke Form</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_age">Age</label>
+                            <input type="text" class="form-control" value="25" id="s_age">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_hypertension">Hypertension</label>
+                            <select id="s_hypertension">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_heartDisease">Heart Disease</label>
+                            <select id="s_heartDisease">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_married">Have you ever been married?</label>
+                            <select id="s_married">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_workType">Work Type</label>
+                            <select id="s_workType">
+                                <option value="0">Never Worked</option>
+                                <option value="1">Childcare/Teaching</option>
+                                <option value="2">Government Job</option>
+                                <option value="3">Self Employed</option>
+                                <option value="4">Private Job</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_residenceType">Residence Type</label>
+                            <select id="s_residenceType">
+                                <option value="1">Urban</option>
+                                <option value="0">Rural</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_avgGlucose">Average Glucose Level</label>
+                            <input type="text" class="form-control" value="100" id="s_avgGlucose">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_bmi">BMI</label>
+                            <input type="text" class="form-control" value="25" id="s_bmi">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="s_smokingStatus">Smoking Status</label>
+                            <select id="s_smokingStatus">
+                                <option value="0">Never Smoked</option>
+                                <option value="1">Smoker</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary" id="s_predict">Make Prediction!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 id="s_output"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
 </body>
