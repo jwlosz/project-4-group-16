@@ -103,6 +103,9 @@
                         <a class="nav-link" href="/stroke_hyper_dashboard"> Stoke & Hypertension Dashboard</a> <!--Adjust for API link will need multiple dashboards-->
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/predictions">Health Risk Predictions</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/about_us">About Us</a>
                     </li>
                     <li class="nav-item">
@@ -116,108 +119,27 @@
     <br/>
     <!-- Dashboard -->
     <div class="container text-center">
+        <!-- Dashboard -->
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <h1>Coffee Distribution Dashboard</h1>
+            <div class="col-md-12 text-center">
+                <h1>Diabetes Dashboard</h1>
                 <p>
-                    According to the <strong><em>Food and Agriculture Organization (FAO)</em></strong>, <strong>coffee</strong> is one of the most widely consumed beverages globally and is also one of the most traded commodities. 
-                    The largest coffee-producing countries include Brazil, Vietnam, and Colombia. 
-                    On the other hand, the European Union and the United States of America are the largest consuming and importing markets for coffee worldwide. 
-                    If you are interested in further analysis, you can explore a dashboard that covers data from 2000 to 2023, focusing on principal coffee-producing countries.
+                    Word word words - description/call to action/ect for context on dashboard
                 </p>
             </div>
+            <hr/>
         </div>
-        <hr/>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <!-- Filters and Controls -->
-                    <h1>Coffee Dashboard</h1>
-                    <div id="filters" style="font-size:18px;">
-                        <label for="country">Select Country:</label>
-                        <select id="country">
-                            <!-- Country Options -->
-                            <option value="All">All</option>
-                            <option value="Algeria">Algeria</option>
-                            <option value="Australia">Australia</option>
-                            <option value="Brazil">Brazil</option>
-                            <option value="Canada">Canada</option>
-                            <option value="China">China</option>
-                            <option value="Colombia">Colombia</option>
-                            <option value="Costa Rica">Costa Rica</option>
-                            <option value="Ethiopia">Ethiopia</option>
-                            <option value="Guatemala">Guatemala</option>
-                            <option value="Honduras">Honduras</option>
-                            <option value="India">India</option>
-                            <option value="Indonesia">Indonesia</option>
-                            <option value="Japan">Japan</option>
-                            <option value="Kenya">Kenya</option>
-                            <option value="Malaysia">Malaysia</option>
-                            <option value="Mexico">Mexico</option>
-                            <option value="Nicaragua">Nicaragua</option>
-                            <option value="Peru">Peru</option>
-                            <option value="Philippines">Philippines</option>
-                            <option value="Russia">Russia</option>
-                            <option value="Switzerland">Switzerland</option>
-                            <option value="Tanzania">Tanzania</option>
-                            <option value="Uganda">Uganda</option>
-                            <option value="Ukraine">Ukraine</option>
-                            <option value="United Kingdom">United Kingdom</option>
-                            <option value="United States">United States</option>
-                            <option value="Vietnam">Vietnam</option>   
-                        </select>
-                    </div>
-                    <p style="font-size:18px;">Click the dropdown menu above to view the country with the highest values about distribution, production, importation, etc of coffee.</p>
+         <div class="row"> <!--</div> style="display: flex; justify-content: center;"> -->
+            <div class ="col-md-12 text-center">
+                <div class='tableauPlaceholder' id='viz1727743414339' style='position: static; margin: 0 auto;'><noscript><a href='#'><img alt='Stroke Health Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StrokeHealthAnalysis&#47;StrokeHealthAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='StrokeHealthAnalysis&#47;StrokeHealthAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StrokeHealthAnalysis&#47;StrokeHealthAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1727743414339');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1427px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                 </div>
             </div>
-            <hr>
-            <div class="row center">
-                <!-- Plotly Plots -->
-                <div class="col-md-6">
-                    <div id="bar_chart"></div>
-                </div>
-                <div class="col-md-6">
-                    <div id="box_plot"></div>
-                </div>
+        </div>
+        <div class="row">
+            <div class = "col-md-12 text-center">
+                <p style="font-size:18px;">Adjust the above filters to visualize the diabetes dataset. </p>
             </div>
-            <hr/>
-            <!-- Additional Text Sections -->
-            <div class="row">
-                <div class="col-md-6 text-center" style="font-size:18px;">
-                    <p>The bar chart gives information about <strong>the avarage of porduction between 2000-2023 by country</strong> the avarage of porduction between 2000-2023.</p>
-                </div>
-                <div class="col-md-6 text-center" style="font-size:18px;">
-                    <p>The box plot visualizes the <strong>distribution of coffee by country</strong>, highlighting countries with the highest values in categories like imports, exports, and stocks. 
-                        To focus on specific countries, use the <strong>'All'</strong> option in the drop-down menu and deselect the undesired countries by clicking on their colors.
-                        To focus on <strong>one country</strong> , simply choose its specific name in the drop-down menu.</p>
-                </div>
-            </div>
-            <hr/>
-            <!-- Data Table -->
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h4>Coffee Distribution Dataset</h4>
-                    <table id="data_table" class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>Year</th>
-                                <th>Total of Production</th>
-                                <th>Total of Stocks</th>
-                                <th>Total of Exports</th>
-                                <th>Total of Imports</th>
-                                <th>Total of Distribution</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- DataTable will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <br/><br/>
-
         </div>
     </div>
     <!-- Custom JavaScript -->

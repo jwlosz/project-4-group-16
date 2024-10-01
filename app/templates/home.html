@@ -77,6 +77,9 @@
                     <a class="nav-link" href="/stroke_hyper_dashboard"> Stoke & Hypertension Dashboard</a> <!--Adjust for API link will need multiple dashboards-->
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/predictions">Health Risk Predictions</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/about_us">About Us</a>
                 </li>
                 <li class="nav-item">
@@ -98,31 +101,22 @@
     </div>
     <hr/>
     <div class="row">
-        <div class="col-md-12 text-center">
-            <!-- Header -->
-            <h1>PENDING HOME PAGE TITLE</h1>
-            
+        <div class="col-md-12 text-center"> 
             <!-- Image -->
             <img src="" />
             <br />
             <hr/>
             <!-- Paragraph -->
-            <p>Does domestic consumption have any effect on bean export? <br /> Curious to find out if there is any correlation between coffee consumption and coffee bean export, data was condensed and formulated into a scatterplot, returning the following graph.</p>
-            <img src="{{ url_for('static', filename='Images/newplotresize.jpg') }}" alt="Static Scatterplot">
+            <p>High Level Questions we looked to address with this dataset
+                <br /> 
+                What are some of the most common risk factors for diabetes/hypertension/stroke?<br />
+                How accurately are we able to predict someone’s risk of developing one of these conditions?<br />
+                Are there specific age groups that see a higher rate of development of a specific condition?<br />
+                Does fruit/vegetable consumption have an impact on diagnosis rates?<br />
+                Does gender have an impact on diagnosis rates?<br />
             <br />
-            <br /> With a correlation coefficient of 0.47604, it appears there is only a slight positive correlation between the two variables.
-            <hr/>
-            <br /> Possible theories explaining the correlation include:<br />
-            <br/>
 
-            <!-- Ordered List -->
-            <ul>
-                <li>A country's export type being different than the domestic preference, leading to a larger import of the preferred flavor.</li>
-                <li>An exporting country experiencing a less than ideal crop yield, leading to lower export levels for the season.</li>
-                <li>Market events, such as the coffee crisis of the early 2000s, which affected coffee trade prices internationally.</li>
-            </ul>
-
-            <br />Ideally, further data would be collected on the topic.<br />
+            <br />#final notes for page<br />
             <hr />
         </div>
     </div>

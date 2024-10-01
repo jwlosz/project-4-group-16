@@ -12,30 +12,6 @@
     <!-- JS IMPORTS - External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- DataTables -->
-    <link href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script>
-
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-    <!-- D3 library -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-
-    <!-- Plotly -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-    <!-- Marker cluster JavaScript -->
-    <script src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
-
-    <!-- Marker cluster CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
-
     <!-- Custom CSS -->
     <link href="../static/css/static.css" rel="stylesheet">
     <!-- CSS -->
@@ -103,6 +79,9 @@
                         <a class="nav-link" href="/stroke_hyper_dashboard"> Stoke & Hypertension Dashboard</a> <!--Adjust for API link will need multiple dashboards-->
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/predictions">Health Risk Predictions</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/about_us">About Us</a>
                     </li>
                     <li class="nav-item">
@@ -115,70 +94,53 @@
 
     <br/>
     <!-- Dashboard -->
-    <div class="container text-center">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <h1>Coffee Distribution Dashboard</h1>
+            <div class="col-md-12 text-center">
+                <h1>Diabetes Dashboard</h1>
                 <p>
-                    According to the <strong><em>Food and Agriculture Organization (FAO)</em></strong>, <strong>coffee</strong> is one of the most widely consumed beverages globally and is also one of the most traded commodities. 
-                    The largest coffee-producing countries include Brazil, Vietnam, and Colombia. 
-                    On the other hand, the European Union and the United States of America are the largest consuming and importing markets for coffee worldwide. 
-                    If you are interested in further analysis, you can explore a dashboard that covers data from 2000 to 2023, focusing on principal coffee-producing countries.
+                    Word word words - description/call to action/ect for context on dashboard
                 </p>
             </div>
+            <hr/>
         </div>
-        <hr/>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <!-- Filters and Controls -->
-                    <h1>Coffee Dashboard</h1>
-                    <div id="filters" style="font-size:18px;">
-                        <label for="country">Select Country:</label>
-                        <select id="country">
-                            <!-- Country Options -->
-                            <option value="All">All</option>
-                            <option value="Algeria">Algeria</option>
-                            <option value="Australia">Australia</option>
-                            <option value="Brazil">Brazil</option>
-                            <option value="Canada">Canada</option>
-                            <option value="China">China</option>
-                            <option value="Colombia">Colombia</option>
-                            <option value="Costa Rica">Costa Rica</option>
-                            <option value="Ethiopia">Ethiopia</option>
-                            <option value="Guatemala">Guatemala</option>
-                            <option value="Honduras">Honduras</option>
-                            <option value="India">India</option>
-                            <option value="Indonesia">Indonesia</option>
-                            <option value="Japan">Japan</option>
-                            <option value="Kenya">Kenya</option>
-                            <option value="Malaysia">Malaysia</option>
-                            <option value="Mexico">Mexico</option>
-                            <option value="Nicaragua">Nicaragua</option>
-                            <option value="Peru">Peru</option>
-                            <option value="Philippines">Philippines</option>
-                            <option value="Russia">Russia</option>
-                            <option value="Switzerland">Switzerland</option>
-                            <option value="Tanzania">Tanzania</option>
-                            <option value="Uganda">Uganda</option>
-                            <option value="Ukraine">Ukraine</option>
-                            <option value="United Kingdom">United Kingdom</option>
-                            <option value="United States">United States</option>
-                            <option value="Vietnam">Vietnam</option>   
-                        </select>
-                    </div>
-                    <p style="font-size:18px;">Click the dropdown menu above to view the country with the highest values about distribution, production, importation, etc of coffee.</p>
+         <div class="row"> <!--</div> style="display: flex; justify-content: center;"> -->
+            <div class ="col-md-12 text-center">
+                <div class='tableauPlaceholder' id='viz1727736205042' style='position: static; margin: 0 auto;'>
+                    <noscript>
+                        <a href='#'><img alt='Diabetes Health Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesHealthAnalysis&#47;DiabetesHealthAnalysis&#47;1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz'  style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                        <param name='name' value='DiabetesHealthAnalysis&#47;DiabetesHealthAnalysis' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesHealthAnalysis&#47;DiabetesHealthAnalysis&#47;1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                        <param name='filter' value='publish=yes' />
+                    </object>
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1727736205042');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1709px';vizElement.style.height='891px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1709px';vizElement.style.height='891px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
                 </div>
             </div>
-            <hr>
-            <div class="row center">
-                <!-- Plotly Plots -->
-                <div class="col-md-6">
-                    <div id="bar_chart"></div>
-                </div>
-                <div class="col-md-6">
-                    <div id="box_plot"></div>
-                </div>
+        </div>
+        <div class="row">
+            <div class = "col-md-12 text-center">
+                <p style="font-size:18px;">Adjust the above filters to visualize the diabetes dataset. </p>
+            </div>
+        </div>
+    </div>
+        <hr>
             </div>
             <hr/>
             <!-- Additional Text Sections -->
@@ -193,41 +155,9 @@
                 </div>
             </div>
             <hr/>
-            <!-- Data Table -->
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h4>Coffee Distribution Dataset</h4>
-                    <table id="data_table" class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>Year</th>
-                                <th>Total of Production</th>
-                                <th>Total of Stocks</th>
-                                <th>Total of Exports</th>
-                                <th>Total of Imports</th>
-                                <th>Total of Distribution</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- DataTable will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
             </div>
-
-            <br/><br/>
-
-            <!-- Map Section
-            <div class="row">
-                <div class="col-md-12 text-center" style="font-size:18px;">
-                    <p>Below is a map of coffee arabica and robusta production. Click the layers to toggle on the heat map.</p>
-                </div>
-                <div class="col-md-12">
-                    <div id="map_container"></div>
-                </div>
-            </div> -->
-        </div>
+        <br/><br/>
+    </div>
     </div>
     <!-- Custom JavaScript -->
     <script type="text/javascript" src="static/js/app.js"></script>
