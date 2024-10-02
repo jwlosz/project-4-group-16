@@ -54,9 +54,9 @@ function makeHypertensionPrediction() {
             let prob = parseFloat(returnedData["preds"]);
 
             if (prob > 0.5) {
-                $("#ht_output").text(`You have or will develop hypertension with probability of ${prob}!`);
+                $("#ht_output").text(`You have or will develop hypertension with probability of ${prob.toFixed(2)}!`);
             } else {
-                $("#ht_output").text(`You do not have or will not develop hypertension with probability of ${1 - prob}.`);
+                $("#ht_output").text(`You do not have or will not develop hypertension with probability of ${(1 - prob).toFixed(2)}.`);
             }
 
         },
@@ -110,9 +110,9 @@ function makeStrokePrediction() {
             let prob = parseFloat(returnedData["preds"]);
 
             if (prob > 0.5) {   
-                $("#s_output").text(`You have had or will have a stroke with probability of ${prob}!`);
+                $("#s_output").text(`You have had or will have a stroke with probability of ${prob.toFixed(2)}!`);
             } else {
-                $("#s_output").text(`You haven't had or will not have a stroke with probability of ${1 - prob}.`);
+                $("#s_output").text(`You haven't had or will not have a stroke with probability of ${(1 - prob).toFixed(2)}.`);
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -165,9 +165,9 @@ function makeDiabetesPrediction() {
             let prob = parseFloat(returnedData["preds"]);
 
             if (prob > 0.5) {
-                $("#d_output").text(`You have or will develop diabetes with probability of ${prob}!`);
+                $("#d_output").text(`You have or will develop diabetes with probability of ${prob.toFixed(2)}!`);
             } else {
-                $("#d_output").text(`You do not have or will not develop diabetes with probability of ${1 - prob}.`);
+                $("#d_output").text(`You do not have or will not develop diabetes with probability of ${(1 - prob).toFixed(2)}.`);
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
