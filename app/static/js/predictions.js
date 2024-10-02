@@ -110,9 +110,9 @@ function makeStrokePrediction() {
             let prob = parseFloat(returnedData["preds"]);
 
             if (prob > 0.5) {   
-                $("#s_output").text(`You have or will develop stroke with probability of ${prob}!`);
+                $("#s_output").text(`You have had or will have a stroke with probability of ${prob}!`);
             } else {
-                $("#s_output").text(`You do not have or will not develop stroke with probability of ${1 - prob}.`);
+                $("#s_output").text(`You haven't had or will not have a stroke with probability of ${1 - prob}.`);
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
