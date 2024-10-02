@@ -36,6 +36,7 @@ def about_us():
     return render_template("about_us.html")
 
 
+# Works Cited
 @app.route("/works_cited")
 def works_cited():
 
@@ -49,23 +50,39 @@ def diabetes_dash():
     return render_template("diabetes_dashboard.html")
 
 
+# Stroke/Hypertension Dashboard
 @app.route("/stroke_hyper_dashboard")
 def stroke_hyper_dash():
 
     return render_template("stroke_hyper_dashboard.html")
 
 
+# Predictions
 @app.route("/predictions")
 def predictions():
 
     return render_template("predictions.html")
 
 
+# Writeup
+@app.route("/writeup")
+def writeup():
+
+    return render_template("writeup.html")
+
+
+#####################################################################
+# API
+#####################################################################
+
+
 @app.route("/strokePrediction", methods=["POST"])
 def predict_stroke():
 
+    # Get data
     content = request.json["data"]
 
+    # Type conversion
     age = float(content["age"])
     hypertension = int(content["hypertension"])
     heart_disease = int(content["heart_disease"])
@@ -76,34 +93,43 @@ def predict_stroke():
     bmi = float(content["bmi"])
     smoking_status = int(content["smoking_status"])
 
+    # Predict
     preds = model_helper.predict_stroke(age, hypertension, heart_disease,
                                         ever_married, work_type,
                                         residence_type, avg_glucose_level,
                                         bmi, smoking_status)
 
+    # Return
     return jsonify({"ok": True, "preds": str(preds)})
 
 
 @app.route("/hypertensionPrediction", methods=["POST"])
 def predict_hypertension():
 
+    # Get data
     content = request.json["data"]
 
+    # Type conversion
     age = float(content["age"])
     cp = int(content["cp"])
     trestbps = int(content["trestbps"])
     chol = int(content["chol"])
     thal = int(content["thal"])
 
+    # Predict
     preds = model_helper.predict_hypertension(age, cp, trestbps, chol, thal)
+
+    # Return
     return jsonify({"ok": True, "preds": str(preds)})
 
 
 @app.route("/diabetesPrediction", methods=["POST"])
 def predict_diabetes():
 
+    # Get data
     content = request.json["data"]
 
+    # Type conversion
     age = float(content["age"])
     sex = float(content["gender"])
     highChol = float(content["highChol"])
@@ -114,9 +140,11 @@ def predict_diabetes():
     physHlth = float(content["physHlth"])
     highBP = float(content["highBP"])
 
+    # Predict
     preds = model_helper.predict_diabetes(age, sex, highChol, bmi, smoke,
                                           genHlth, mntHlth, physHlth, highBP)
 
+    # Return
     return jsonify({"ok": True, "preds": str(preds)})
 
 
