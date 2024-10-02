@@ -73,3 +73,9 @@ height: 200px; /* Set the desired height for all images */
 object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 
+
+
+.custom-img {
+    max-width: 67.5%; /* Scales the image down to 80% of its container */
+    height: auto;   /* Maintains the aspect ratio */
+}

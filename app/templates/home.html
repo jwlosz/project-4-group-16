@@ -60,7 +60,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg" style="background-color: #002856;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Diabetes Analysis - Diabetes, Hypertension and Stroke</a>
+        <a class="navbar-brand" href="/">Diabetes Analysis</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -101,23 +101,28 @@
     </div>
     <hr/>
     <div class="row">
-        <div class="col-md-12 text-center"> 
+        <div class="col-md-6 text-center"> 
             <!-- Image -->
-            <img src="" />
-            <br />
-            <hr/>
-            <!-- Paragraph -->
-            <p>High Level Questions we looked to address with this dataset
-                <br /> 
-                What are some of the most common risk factors for diabetes/hypertension/stroke?<br />
-                How accurately are we able to predict someone’s risk of developing one of these conditions?<br />
-                Are there specific age groups that see a higher rate of development of a specific condition?<br />
-                Does fruit/vegetable consumption have an impact on diagnosis rates?<br />
-                Does gender have an impact on diagnosis rates?<br />
-            <br />
-
-            <br />#final notes for page<br />
+            <img src="{{ url_for('static', filename='Images/homepage.jpg') }}" alt="Landing Image" class = "img_fluid custom-img" />
             <hr />
+            <br />
+        </div>
+            <div class="col-md-6 text-center"> 
+                <!-- Paragraph -->
+                <p>High Level Questions we looked to address with this dataset
+                    <br /> 
+                    <strong>What are some of the most common risk factors for diabetes/hypertension/stroke?<br />
+                    How accurately are we able to predict someone’s risk of developing one of these conditions?<br />
+                    Are there specific age groups that see a higher rate of development of a specific condition?<br />
+                    Does fruit/vegetable consumption have an impact on diagnosis rates?<br />
+                    Does gender have an impact on diagnosis rates?<br /></strong>
+                <br />
+
+                <br />Diabetes is defined as :<strong> a chronic, metabolic disease characterized by elevated levels of blood glucose (or blood sugar), which leads over time to serious damage to the heart, blood vessels, eyes, kidneys and nerves.</strong> <br />
+                <br />Stroke is defined as :<strong>blood flow to the brain is blocked or there is sudden bleeding in the brain.</strong> <br/>
+                <br/>Hypertension is defined as : <strong>is when the pressure in your blood vessels is too high (140/90 mmHg or higher). It is common but can be serious if not treated. </strong> 
+                <hr />
+            </div>
         </div>
     </div>
 </div>
