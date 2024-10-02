@@ -79,7 +79,7 @@ class ModelHelper:
 
         df = df.loc[:, ['Age', 'Sex', 'HighChol', 'BMI', 'Smoker', 'GenHlth',
                         'MentHlth', 'PhysHlth', 'HighBP']]
-        return self.predict("app/static/ml/diabetes.pkl", df)
+        return self.predict("static/ml/diabetes.pkl", df)
 
     # predict hypertension
     def predict_hypertension(self, age, cp, trestbps, chol, thal):
@@ -105,7 +105,7 @@ class ModelHelper:
 
         df = df.loc[:, ['age', 'cp', 'trestbps', 'chol', 'thal']]
 
-        return self.predict("app/static/ml/hypertension_model.h5", df)
+        return self.predict("static/ml/hypertension_model.h5", df)
 
     # predict stroke
     def predict_stroke(self, age, hypertension, heart_disease, ever_married,
@@ -144,4 +144,4 @@ class ModelHelper:
                         'work_type', 'Residence_type', 'avg_glucose_level',
                         'bmi', 'smoking_status']]
 
-        return self.predict("app/static/ml/stroke_model.h5", df)
+        return self.predict("static/ml/stroke_model.h5", df)
