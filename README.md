@@ -12,4 +12,4 @@ This project is also hosted on pythonanywhere. See [here](https://wrp94.pythonan
 
 ## Writeup
 
-The writeup is available for download [here](app/static/Writeup.pdf) or a web version is [here](https://wrp94.pythonanywhere.com/writeup).
+The writeup is available for download [here](writeup%20and%20presentation/Project%204%20Write-up%20.pdf) or a web version is [here](https://wrp94.pythonanywhere.com/writeup).
